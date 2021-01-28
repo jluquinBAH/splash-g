@@ -1,10 +1,13 @@
-require(sp)
-library(DT)
-library(leaflet)
-library(raster)
-library(rgeos)
-library(dplyr)
-library(shiny)
+# loading packages and seeing if the user already has them. If not it will install them and load them
+
+pack <- c('sp', 'DT', 'leaflet', 'raster', 'rgeos', 'dplyr', 'shiny')
+for (i in pack) {
+  if(!require(i, character.only = T, quietly = T)) {
+    install.packages(i)
+    library(i, character.only = T)
+  }
+}
+
 
 ui <- fluidPage(
   
