@@ -125,6 +125,8 @@ server <- function(input, output){
         masterDf$V_or_R[i] <- "V"
       }
     }
+    masterDf$Person <- as.factor(masterDf$Person)
+    masterDf$V_or_R <- as.factor(masterDf$V_or_R)
     masterDf
   })
   
