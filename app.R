@@ -1,4 +1,5 @@
 # loading packages and seeing if the user already has them. If not it will install them and load them
+# This is to test that the dev branch worked
 
 pack <- c('sp', 'DT', 'leaflet', 'raster', 'rgeos', 'dplyr', 'shiny')
 for (i in pack) {
